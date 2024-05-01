@@ -1,0 +1,34 @@
+﻿@model DrinksMVC.Models.AddProductViewModel
+@{
+
+}
+
+<h1>Добавить продукт</h1>
+<form method="post" action="Add" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Название</label>
+        <input type="text" class="form-control" asp-for="Name"/>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Описание</label>
+        <input type="text" class="form-control" asp-for="Description" />
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Photo</label>
+        <input type="file" class="form-control" asp-for="PhotoUrl" />
+    </div> 
+    <div class="mb-3">
+        <label for="" class="form-label">Цена</label>
+        <input type="number" class="form-control" asp-for="Price" />
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Кол-во</label>
+        <input type="number" class="form-control" asp-for="Count" />
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Наличие товара</label>
+        <input type="checkbox" class="form-control" asp-for="IsAvailable" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

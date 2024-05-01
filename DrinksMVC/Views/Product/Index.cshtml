@@ -1,0 +1,33 @@
+﻿@model List<DrinksMVC.Models.Domain.ListDrinks>
+
+@{
+}
+
+<h1>Продукты</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Название</th>
+            <th>Описание</th>
+            <th>Фото</th> 
+            <th>Цена</th>
+            <th>Кол-во</th>
+            <th>Наличие</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.Name</td>
+                <td>@product.Description</td>
+                    <td>@product.PhotoUrl</td>
+                <td>@product.Price</td>
+                <td>@product.Count</td>
+                <td><a href="Product/View/@product.Id">View</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
